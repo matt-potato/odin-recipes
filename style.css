@@ -6,31 +6,38 @@ html {
     justify-content: center;
 }
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-family: 'Quicksand', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.2;
-    background-image: url(images/bg-checkered.jpg);
-    background-position: center top;
+    background-color: #FFF4ED;
 }
-.feature-wrap {
+.wrapper {
+    margin: 0 auto;
+    max-width: 90vw;
+}
+h1, h2, h3 {
+    color: #BD5943;
+}
+.main-heading {
+    display: block;
+    text-decoration: none;
+    font-size: 8rem;
+    font-weight: 900;
+    line-height: 1;
+    color: #BD5943;
+    margin: 1rem 0;
     text-align: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 2rem;
-    padding: 2rem;
-    background: rgba(255,255,255,.97);
-    border-radius: 2rem;
-    border: 2px solid #FF0000;
-    box-shadow: 0px 5px 15px rgba(0,0,0,.2);
 }
-h1 {
-    font-size: 4rem;
-    color: #FFF;
-    -webkit-text-stroke: 1px #FF0000;
-    margin: 0 0 1rem;
+.main-heading:before {
+    content: '\f2e7';
+    font-family: "Font Awesome 6 Free";
+    color: #FFC4A8;
+    display: block;
+    width: 8rem;
+    margin: 0 auto 2rem auto;
+    background-color: #BD5943;
+    border-radius: 50%;
 }
 .featured-recipes {
     display: flex;
@@ -46,8 +53,8 @@ h1 {
 }
 .featured-recipes li a {
     display: block;
-    font-size: 1.5rem;
-    color: #000;
+    font-size: 2rem;
+    color: #FA8D74;
     text-decoration: none;
     transition: color .3s;
 }
@@ -57,27 +64,50 @@ h1 {
     width: 100%;
     height: 50vh;
     margin-bottom: 1rem;
-    border-radius: 2rem;
-    box-shadow: 1px 0px 15px rgba(0,0,0,.2);
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px rgba(0,0,0,.5);
+    background-color: #000;
     background-repeat: no-repeat;
     background-position: center center !important;
     background-size: cover !important;
-    transition: opacity .3s;
+    transition: transform .3s, box-shadow .3s;
 }
 .featured-recipes li a.milk-steak:before {
-    background: url(images/milk-steak.jpg);
+    background-image: url(images/milk-steak.jpg);
 }
 .featured-recipes li a.grilled-charlie:before {
-    background: url(images/grilled-charlie.jpg);
+    background-image: url(images/grilled-charlie.jpg);
 }
 .featured-recipes li a.porkchops:before {
-    background: url(images/porkchops.jpg);
+    background-image: url(images/porkchops.jpg);
 }
 .featured-recipes li a:hover {
-    color: #FF0000;
+    color: #BD5943;
 }
 .featured-recipes li a:hover:before {
-    opacity: .75;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    transform: translateY(-10px);
+}
+.recipe-wrap {
+    max-width: 800px;
+    margin: 3rem auto;
+}
+.recipe-wrap img {
+    width: 100%;
+    box-shadow: 0 1px 5px rgba(0,0,0,.25);
+}
+.recipe-wrap ul, .recipe-wrap ol {
+    padding: 2rem 2rem 2rem 3rem;
+    margin: 0 0 3rem;
+    background: #FFF;
+    box-shadow: 0 1px 5px rgba(0,0,0,.25);
+}
+.recipe-wrap li {
+    padding:0;
+    margin-bottom: 1rem;
+}
+.recipe-wrap li:last-child {
+    margin: 0;
 }
 @media screen and (max-width: 990px) {
     .featured-recipes {
