@@ -1,3 +1,9 @@
+:root{
+    --main: #BD5943;
+    --lighter: #FFC4A8;
+    --dark: #FA8D74;
+    --light: #FFF4ED;
+}
 html {
     min-height: 100%;
     display: flex;
@@ -10,14 +16,24 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.2;
-    background-color: #FFF4ED;
+    background-color: var(--light);
+}
+body.recipes {
+    background-image: url(images/bg-onion.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: calc(100% + 30px) calc(100% + 30px);
+    background-size: 20vw;
 }
 .wrapper {
     margin: 0 auto;
     max-width: 90vw;
 }
 h1, h2, h3 {
-    color: #BD5943;
+    color: var(--main);
+}
+p {
+    margin: 0 0 2rem;
 }
 .main-heading {
     display: block;
@@ -25,18 +41,18 @@ h1, h2, h3 {
     font-size: 8rem;
     font-weight: 900;
     line-height: 1;
-    color: #BD5943;
+    color: var(--main);
     margin: 1rem 0;
     text-align: center;
 }
 .main-heading:before {
     content: '\f2e7';
     font-family: "Font Awesome 6 Free";
-    color: #FFC4A8;
+    color: var(--lighter);
     display: block;
     width: 8rem;
     margin: 0 auto 2rem auto;
-    background-color: #BD5943;
+    background-color: var(--main);
     border-radius: 50%;
 }
 .featured-recipes {
@@ -54,7 +70,7 @@ h1, h2, h3 {
 .featured-recipes li a {
     display: block;
     font-size: 2rem;
-    color: #FA8D74;
+    color: var(--dark);
     text-decoration: none;
     transition: color .3s;
 }
@@ -82,7 +98,7 @@ h1, h2, h3 {
     background-image: url(images/porkchops.jpg);
 }
 .featured-recipes li a:hover {
-    color: #BD5943;
+    color: var(--main);
 }
 .featured-recipes li a:hover:before {
     box-shadow: 0 5px 15px rgba(0,0,0,.5);
@@ -92,13 +108,23 @@ h1, h2, h3 {
     max-width: 800px;
     margin: 3rem auto;
 }
+.recipe-wrap h1 {
+    position: relative;
+    display: inline-block;
+    color: #FFF;
+    padding: 0.25rem 0.5rem;
+    margin: 0;
+    left: -1.5rem;
+    background-color: var(--dark);
+}
 .recipe-wrap img {
     width: 100%;
+    margin-top: -1.5rem;
     box-shadow: 0 1px 5px rgba(0,0,0,.25);
 }
 .recipe-wrap ul, .recipe-wrap ol {
     padding: 2rem 2rem 2rem 3rem;
-    margin: 0 0 3rem;
+    margin: 0 0 2rem;
     background: #FFF;
     box-shadow: 0 1px 5px rgba(0,0,0,.25);
 }
